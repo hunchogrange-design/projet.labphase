@@ -1,0 +1,122 @@
+/* Reset et style global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff0f5; /* Lavande douce */
+    color: #333;
+}
+
+/* Header */
+header {
+    padding: 25px;
+    text-align: center;
+    background-color: #ffb6c1; /* Rose pastel */
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin-bottom: 15px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header input {
+    padding: 10px 15px;
+    width: 300px;
+    max-width: 90%;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+/* Grille produits */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 25px;
+}
+
+/* Cartes produits */
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card img.product-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 200px;
+}
+
+.card img.brand-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.card .info {
+    padding: 15px;
+}
+
+.card .info h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #ff69b4; /* Rose vif */
+}
+
+.card .info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card .info .price {
+    font-weight: bold;
+    color: #ff1493; /* Fuchsia */
+    margin-bottom: 10px;
+}
+
+.card .info button {
+    padding: 10px 15px;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff69b4;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card .info button:hover {
+    background-color: #ff1493;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ffb6c1;
+    color: #fff;
+    margin-top: 20px;
+}
