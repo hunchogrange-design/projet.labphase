@@ -1,53 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>BasketShop Sénégal</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>BasketShop - E-commerce Sneakers</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>🏀 BasketShop Sénégal</h1>
-
-  <div class="controls">
-    <input type="text" id="search" placeholder="Rechercher une chaussure..." onkeyup="searchProduct()">
-
-    <select onchange="filterBrand(this.value)">
-      <option value="all">Toutes les marques</option>
-      <option value="Nike">Nike</option>
-      <option value="Adidas">Adidas</option>
-      <option value="Jordan">Jordan</option>
-      <option value="Puma">Puma</option>
-      <option value="New Balance">New Balance</option>
-    </select>
-  </div>
-
+  <h1>🏀 BasketShop</h1>
   <div class="cart">
-    🛒 <span id="cart-count">0</span> |
-    Total : <span id="cart-total">0</span> FCFA
+    🛒 Panier: <span id="cart-count">0</span> articles |
+    Total: <span id="cart-total">0</span> €
   </div>
 </header>
 
-<section class="products" id="product-list"></section>
+<section class="products">
 
-<section class="cart-details">
-  <h2>🛍️ Panier</h2>
-  <ul id="cart-items"></ul>
-
-  <div class="delivery">
-    Livraison Dakar : 3 000 FCFA
+  <!-- NIKE -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Nike Air Force 1">
+    <h3>Nike Air Force 1</h3>
+    <p class="price">120</p>
+    <button onclick="addToCart('Nike Air Force 1',120)">Ajouter</button>
   </div>
 
-  <h3>Total final : <span id="final-total">0</span> FCFA</h3>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5" alt="Nike Air Max 90">
+    <h3>Nike Air Max 90</h3>
+    <p class="price">140</p>
+    <button onclick="addToCart('Nike Air Max 90',140)">Ajouter</button>
+  </div>
 
-  <button onclick="checkout('Wave')">Payer avec Wave</button>
-  <button onclick="checkout('Orange Money')">Payer avec Orange Money</button>
+  <!-- ADIDAS -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a" alt="Adidas Ultraboost">
+    <h3>Adidas Ultraboost</h3>
+    <p class="price">150</p>
+    <button onclick="addToCart('Adidas Ultraboost',150)">Ajouter</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329" alt="Adidas Forum Low">
+    <h3>Adidas Forum Low</h3>
+    <p class="price">110</p>
+    <button onclick="addToCart('Adidas Forum Low',110)">Ajouter</button>
+  </div>
+
+  <!-- JORDAN -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1584735175315-9d5df23be620" alt="Air Jordan 1">
+    <h3>Air Jordan 1</h3>
+    <p class="price">180</p>
+    <button onclick="addToCart('Air Jordan 1',180)">Ajouter</button>
+  </div>
+
+  <!-- PUMA -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5" alt="Puma RS-X">
+    <h3>Puma RS-X</h3>
+    <p class="price">100</p>
+    <button onclick="addToCart('Puma RS-X',100)">Ajouter</button>
+  </div>
+
 </section>
 
-<footer>
-  <p>© 2026 BasketShop Sénégal | Contact: +221 77 000 00 00</p>
-</footer>
+<section class="cart-details">
+  <h2>🛍️ Détail du Panier</h2>
+  <ul id="cart-items"></ul>
+</section>
 
 <script src="script.js"></script>
 </body>
