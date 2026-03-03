@@ -1,25 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lovable BasketShop</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>BasketShop Sénégal</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>💖 Lovable BasketShop</h1>
-        <input type="text" id="search" placeholder="Rechercher une basket ou marque...">
-    </header>
 
-    <main id="products-container">
-        <!-- Cartes produits générées ici -->
-    </main>
+<header>
+  <h1>🏀 BasketShop Sénégal</h1>
 
-    <footer>
-        <p>© 2026 Lovable BasketShop | Pape Massamba Dial</p>
-    </footer>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Rechercher une chaussure..." onkeyup="searchProduct()">
 
-    <script src="script.js"></script>
+    <select onchange="filterBrand(this.value)">
+      <option value="all">Toutes les marques</option>
+      <option value="Nike">Nike</option>
+      <option value="Adidas">Adidas</option>
+      <option value="Jordan">Jordan</option>
+      <option value="Puma">Puma</option>
+      <option value="New Balance">New Balance</option>
+    </select>
+  </div>
+
+  <div class="cart">
+    🛒 <span id="cart-count">0</span> |
+    Total : <span id="cart-total">0</span> FCFA
+  </div>
+</header>
+
+<section class="products" id="product-list"></section>
+
+<section class="cart-details">
+  <h2>🛍️ Panier</h2>
+  <ul id="cart-items"></ul>
+
+  <div class="delivery">
+    Livraison Dakar : 3 000 FCFA
+  </div>
+
+  <h3>Total final : <span id="final-total">0</span> FCFA</h3>
+
+  <button onclick="checkout('Wave')">Payer avec Wave</button>
+  <button onclick="checkout('Orange Money')">Payer avec Orange Money</button>
+</section>
+
+<footer>
+  <p>© 2026 BasketShop Sénégal | Contact: +221 77 000 00 00</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
